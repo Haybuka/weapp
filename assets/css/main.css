@@ -1,0 +1,262 @@
+/* Basic Reset */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	font-family: inherit;
+}
+
+:root {
+	--base-color: rgb(255, 255, 255) !important;
+	--primary-color: #777 !important;
+	--secondary-color: #262b48 !important;
+	--font-stack: "Poppins", sans-serif;
+	/* --font-body-size: 21px; */
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: lobster;
+	font-weight: 400;
+	line-height: 1.7;
+	color: var(--primary-color);
+	box-sizing: border-box;
+	padding: 0 !important;
+}
+
+.wrapper {
+	background: #8e0e0080;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #1f1c1888, #8e0e0080);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #1f1c1888, #8e0e0080);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	background-blend-mode: hue;
+	width: 68.5rem;
+	/* height: 75rem !important; */
+	overflow: hidden !important;
+	max-width: 100%;
+	position: relative;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+
+nav {
+	position: fixed;
+	width: 68.5rem;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	/* background-color: var(--secondary-color); */
+	padding: 1rem;
+	color: var(--base-color);
+	font-size: 1.5rem;
+}
+
+.data--preloader {
+	display: none;
+}
+
+.nav--harmburger {
+	margin-left: 1.5rem;
+}
+
+.nav--harmburger span {
+	display: block;
+	background-color: var(--base-color);
+	width: 3rem;
+	height: .3rem;
+	margin-top: .3rem;
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+.nav--harmburger span:nth-of-type(even) {
+	width: 2rem;
+}
+
+.nav--search-component {
+	margin-right: 1.5rem;
+	cursor: pointer;
+}
+
+.nav--search-component p {
+	padding-top: 0;
+	font-size: 2.5rem;
+	font-weight: 400;
+}
+
+.current {
+	margin-bottom: 5rem;
+	margin-top: 5rem;
+	margin-left: 5rem;
+}
+
+.current--degree {
+	font-size: 5rem;
+	color: var(--base-color);
+	margin: 0;
+	padding: 0;
+}
+
+.current--description {
+	font-size: 3rem;
+	color: var(--base-color);
+}
+
+.measurement--value {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	/* background-color: var(--secondary-color); */
+	padding: 1rem;
+}
+
+.measure {
+	list-style-type: none;
+	color: var(--base-color);
+	font-size: 1.5rem;
+}
+
+.search--result {
+	margin: 1rem 0;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.search--result img {
+	width: 6rem;
+}
+
+.search--result li {
+	display: flex;
+	justify-content: space-between;
+	/* background-color: var(--secondary-color); */
+	color: var(--base-color);
+	padding: 1rem 2rem;
+	padding: 1rem;
+	align-items: center;
+	font-size: 1rem;
+	position: relative;
+	margin-top: 1rem;
+	cursor: pointer;
+	border-bottom: .1rem solid #53525294;
+}
+
+.search--result li:nth-child(5) {
+	border-bottom: none;
+}
+
+/* widget */
+
+input[type="search"] {
+	padding: 1.5rem;
+	margin-top: 1rem;
+	border-radius: 100px;
+	border: none;
+	width: 100%;
+	text-shadow: none;
+	font-family: inherit;
+}
+
+.heading-headers {
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	font-family: inherit;
+	font-weight: bold;
+}
+
+input[type="search"]:focus {
+	outline: none;
+	box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.493);
+}
+
+.current.reduce,
+.measurement.reduce,
+.day-list.reduce {
+	opacity: 0.2;
+}
+
+.widget--back {
+	font-size: 2rem;
+	cursor: pointer;
+	color: #fff;
+}
+
+.widget.open {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.widget--result {
+	margin: 1rem 0;
+	margin-bottom: 0 !important;
+}
+
+.widget--result li {
+	word-wrap: break-word;
+	list-style-type: none;
+	font-size: 1.5rem;
+	padding: .5rem 1rem;
+	border-bottom: .1rem solid #53525294;
+	margin-top: 1rem;
+	cursor: pointer;
+	color: #fff;
+	cursor: auto;
+}
+
+.loader {
+	clip-path: circle(45% at 50% 50%);
+	border: 1.6rem solid transparent;
+	border-radius: 50%;
+	border-top: 1.6rem solid #ffffff;
+	border-bottom: 1.6rem solid #ffffff;
+	width: 6rem;
+	height: 6rem;
+
+	-webkit-animation: spin 2s linear infinite;
+	/* Safari */
+	animation: spin 2s linear infinite;
+	margin: 1rem;
+	margin-top: 5rem;
+	text-align: center;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	nav {
+		padding-left: 11rem;
+		padding-right: 11rem;
+	}
+}
