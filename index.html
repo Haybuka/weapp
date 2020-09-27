@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A Weather Project">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A Weather Project" />
     <title>WiiCloud</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,700;1,400&display=swap"
-        rel="stylesheet">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/assets/images/icon/icon-96x96.png">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="/assets/images/icon/icon-96x96.png" />
     <meta name="theme-color" content="#d89324" />
-    <meta name="apple-mobile-web-app-status-bar" content="#d89324">
-    <link rel="icon" href="assets/images/icon/app.png" type="image/png" sizes="96x96">
+    <meta name="apple-mobile-web-app-status-bar" content="#d89324" />
+    <link
+      rel="icon"
+      href="assets/images/icon/app.png"
+      type="image/png"
+      sizes="96x96"
+    />
     <style>
-        body {
-            background-color: #718d97;
-            background: url('assets/images/bg.webp');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-blend-mode: lighten;
-        }
+      body {
+        background-color: #718d97;
+        background: url("assets/images/bg.webp");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-blend-mode: lighten;
+      }
 
-        .widget {
-            /* background: url('assets/images/bkg.webp'); */
-            background-position: bottom;
-            background-color: #21292e;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            padding: 1rem;
-            position: absolute;
-            max-width: 100%;
-            width: 68.5rem;
-            overflow: hidden;
-            width: 100%;
-            transform: translateX(-70rem);
-            opacity: 0;
-            height: auto;
-            transition: all 0.5s ease-in-out;
-            background-blend-mode: hue;
-            z-index: 2;
-            top: 0;
-            padding-bottom: 0;
-        }
+      .widget {
+        /* background: url('assets/images/bkg.webp'); */
+        background-position: bottom;
+        background-color: #21292e;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding: 1rem;
+        position: absolute;
+        max-width: 100%;
+        width: 68.5rem;
+        overflow: hidden;
+        width: 100%;
+        transform: translateX(-70rem);
+        opacity: 0;
+        height: auto;
+        transition: all 0.5s ease-in-out;
+        background-blend-mode: hue;
+        z-index: 2;
+        top: 0;
+        padding-bottom: 0;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <nav>
-            <div class="nav--harmburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="nav--weather-location">
-                <p class="js-location-current"> </p>
-            </div>
-            <div class="nav--search-component">
-                <p> + </p>
-            </div>
-        </nav>
-        <div class="loader">
-
+      <nav>
+        <div class="nav--harmburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <!--
+        <div class="nav--weather-location">
+          <p class="js-location-current"></p>
+        </div>
+        <div class="nav--search-component">
+          <p>+</p>
+        </div>
+      </nav>
+      <div class="loader"></div>
+      <!--
         <section class="current">
             <div class="data--preloader">
 
@@ -104,7 +108,7 @@
                 </li>
             </ul>
         </aside> -->
-        <!-- <section>
+      <!-- <section>
             <ul class="search--result js-search--result">
                 <li>
 
@@ -119,20 +123,24 @@
                 </li>
             </ul>
         </section> -->
-        <aside class="widget">
-            <p class="widget--back"> &lt; </p>
-            <form action="">
-                <label for="search">Location Uses Timezone</label>
-                <input type="search" name="search" id="search" placeholder="Enter required location here">
-            </form>
-            <ul class="widget--result js-widget--result">
-                <li>curent location</li>
-            </ul>
-        </aside>
+      <aside class="widget">
+        <p class="widget--back">&lt;</p>
+        <form action="">
+          <label for="search">Location Uses Timezone</label>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Enter required location here"
+          />
+        </form>
+        <ul class="widget--result js-widget--result">
+          <li>curent location</li>
+        </ul>
+      </aside>
     </div>
     <script src="assets/scripts/axios/dist/axios.min.js"></script>
     <script src="/assets/scripts/app.js"></script>
     <script src="assets/scripts/main.js"></script>
-</body>
-
+  </body>
 </html>
